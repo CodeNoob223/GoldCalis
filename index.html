@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Alt L + Alt + O to open live server --> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldCalis</title>
+    <link rel="icon" type="image/png" href="./webLogo/goldenDumbell.png" sizes="16x16"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header-container">
+        <header>
+            <img class="logo" src="./webLogo/LOGO.png" alt="GoldCalis">
+            
+            <nav id="nav-container">
+                <ul class="nav__links">
+                    <li id="shop-container" class="drop-down"> 
+                        <a href="#" class="drop-down-title">Shop</a>
+                        
+                        <div class="drop-down-content" id="shop">
+                            <div class="drop-down-item">
+                                <a href="">Whey</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Pareletes</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Rings</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Áo tạ</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li id="program-container" class="drop-down">
+                        <a href="#" class="drop-down-title">Chương trình</a>
+                        <div class="drop-down-content"  id="program">
+                            <div class="drop-down-item">
+                                <a href="">Muscle Up</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Planche</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Front lever</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Back lever</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li id="workout-container" class="drop-down">
+                        <a href="#" class="drop-down-title">Bài tập</a>
+                        <div class="drop-down-content"  id="workout">
+                            <div class="drop-down-item">
+                                <a href="">Bắp tay và cẳng tay</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Xô, lưng dưới</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Ngực, tay sau và vai</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Đùi và bắp chuối</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li id="article-container" class="drop-down">
+                        <a href="#" class="drop-down-title">Bài viết</a>
+                        <div class="drop-down-content"  id="article">
+                            <div class="drop-down-item">
+                                <a href="">Phát triển cơ bắp</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Thực phẩm bổ xung</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Steroid là gì?</a>
+                            </div>
+                            <div class="drop-down-item">
+                                <a href="">Nghỉ đúng cách</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="search-bar-container">
+                <input id="search-bar" type="text" placeholder="Tìm kiếm">
+                
+                <svg id="search-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <circle cx="22.5" cy="17.5" r="4.5" stroke="#8B8C8C" stroke-width="2"/>
+                    <path d="M19 21L13 27" stroke="#8B8C8C" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="hamburger-menu-container"> 
+                <svg id="hamburger-menu-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <g clip-path="url(#clip0_82_210)">
+                    <rect width="16" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 14)" fill="#8B8C8C"/>
+                    <rect width="11" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 21)" fill="#8B8C8C"/>
+                    <rect width="16" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 28)" fill="#8B8C8C"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_82_210">
+                    <rect width="16" height="16" fill="white" transform="translate(28 12) rotate(90)"/>
+                    </clipPath>
+                    </defs>
+                </svg>                        
+                
+                <svg id="close-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <rect width="16" height="2" transform="matrix(0.707107 0.707107 0.707107 -0.707107 13.636 15.0502)" fill="#8B8C8C"/>
+                    <rect x="26.364" y="15.0502" width="16" height="2" transform="rotate(135 26.364 15.0502)" fill="#8B8C8C"/>
+                </svg>
+            </div>
+        </header>
+    </div>
+    <div class="banner-container">
+        <div class="banner-title">
+            Sức khỏe là một điều quý giá,<br>
+            trở nên khỏe mạnh là một lựa chọn
+        </div>
+        
+        <button class="banner-button">
+            <span>Khám phá</span>
+        </button>
+    </div>
+    <div class="info-container">
+        <div class="title">
+            Calisthenic là gì?
+        </div>
+        <div class="line"></div>
+        <div class="info">
+            <span>
+                Calisthenic được hiểu đơn giản là xây dựng sức khỏe và cơ bắp tập bằng trọng lượng cơ thể.<br><br> 
+                Calisthenic bao gồm: Street workout và Gymnastic<br><br>
+                Tập Calisthenic Không cần đến  dụng cụ, tuy nhiên không ai cản bạn cho thêm dụng cụ vào bài tập.
+            </span>
+        </div>
+        <div class="info-icon">
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Paraletes.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Dumbell.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Rings.png" alt="">
+            </div>
+        </div>
+        <div class="title">
+            Một vài lưu ý
+        </div>
+        <div class="line"></div>
+        <div class="info">
+            <span>
+                Tập Calisthenic có thể giúp phát triển cơ bắp, quan trọng là cách tập luyện và chế độ dinh dưỡng.<br><br>
+
+                Tập Calisthenic không ảnh hưởng (tăng hoặc giảm) đến chiều cao, chiều cao được quyết định qua gen.
+            </span>
+        </div>
+        <div class="info-icon">
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Height.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Whey.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Pullup.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="level-container">
+        <div class="white-title">Bạn thuộc trình độ nào?</div>
+        <div class="white-line"></div>
+        <div class="level-container-content">Chọn trình độ thích hợp để bắt đầu hành trình của bạn<br>
+            hoặc để tiếp tục cải thiện bản thân.</div>
+        <div class="level-card-container">
+            <div class="level-card">
+                <div class="level-card-background">
+                    <img src="./desktop/beginner.png" alt="">
+                </div>
+                <div class="level-card-gradient"></div>
+                <div class="level-card-title">Mới bắt đầu (beginner)</div>
+                <div class="level-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <ul class="level-card-content">
+                    <li class="level-card-content-item">Bài tập dễ</li>
+                    <li class="level-card-content-item">Luyện chuẩn forrm</li>
+                    <li class="level-card-content-item">Tăng sức mạnh</li>
+                    <li class="level-card-content-item">Tăng số rep</li>
+                    <li class="level-card-content-item">Thời gian nghỉ lâu</li>
+                </ul>
+            </div>
+
+            <div class="level-card">
+                <div class="level-card-background">
+                    <img src="./desktop/amateur.png" alt="">
+                </div>
+                <div class="level-card-gradient"></div>
+                <div class="level-card-title">Nghiệp dư (amateur)</div>
+                <div class="level-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <ul class="level-card-content">
+                    <li class="level-card-content-item">Bài tập cơ bản</li>
+                    <li class="level-card-content-item">Xây dựng sức mạnh</li>
+                    <li class="level-card-content-item">Tăng cơ bắp</li>
+                    <li class="level-card-content-item">Tăng số rep</li>
+                    <li class="level-card-content-item">Tăng sức bền</li>
+                    <li class="level-card-content-item">Thời gian nghỉ ít</li>
+                </ul>
+            </div>
+
+            <div class="level-card">
+                <div class="level-card-background">
+                    <img src="./desktop/intermediate.png" alt="">
+                </div>
+                <div class="level-card-gradient"></div>
+                <div class="level-card-title">Trung cấp (intermediate)</div>
+                <div class="level-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <ul class="level-card-content">
+                    <li class="level-card-content-item">Bài tập hơi khó</li>
+                    <li class="level-card-content-item">Xây dựng sức mạnh</li>
+                    <li class="level-card-content-item">Luyện các skill dễ</li>
+                    <li class="level-card-content-item">Tăng sức bền</li>
+                    <li class="level-card-content-item">Thời gian nghỉ ít</li>
+                </ul>
+            </div>
+
+            <div class="level-card">
+                <div class="level-card-background">
+                    <img src="./desktop/advanced.png" alt="">
+                </div>
+                <div class="level-card-gradient"></div>
+                <div class="level-card-title">Nâng cao (advanced)</div>
+                <div class="level-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <ul class="level-card-content">
+                    <li class="level-card-content-item">Bài tập khó</li>
+                    <li class="level-card-content-item">Tăng sức mạnh</li>
+                    <li class="level-card-content-item">Tăng sức bền</li>
+                    <li class="level-card-content-item">Luyện các skill nâng cao</li>
+                    <li class="level-card-content-item">Thời gian nghỉ lâu</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="goal-container">
+        <div class="title">
+            Mục tiêu tập luyện của bạn là gì?
+        </div>
+        
+        <div class="line"></div>
+        
+        <div class="goal-content">
+            Chúng tôi đưa ra nhiều lựa chọn, để bạn đạt được mục <br> đích một cách hiệu quả và nhanh nhất
+        </div>
+        
+        <div class="goal-card-container">
+            <div class="goal-card">
+                <div class="goal-card-title">
+                    Tập vật tay
+                </div>
+                <div class="goal-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <div class="goal-card-gradient"></div>
+                <img src="./desktop/ArmWrestling.png" alt="" class="goal-card-background">
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-card-title">
+                    Mở khóa skill
+                    </div>
+                <div class="goal-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <div class="goal-card-gradient"></div>
+                <img src="./desktop/Skill.png" alt="" class="goal-card-background">
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-card-title">
+                    Tăng sức mạnh
+                </div>
+                <div class="goal-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <div class="goal-card-gradient"></div>
+                <img src="./desktop/Strength.png" alt="" class="goal-card-background">
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-card-title">
+                    Xây dựng cơ bắp
+                </div>
+                <div class="goal-card-button">
+                    <span>
+                        Xem ngay
+                    </span>
+                </div>
+                <div class="goal-card-gradient"></div>
+                <img src="./desktop/Muscle.png" alt="" class="goal-card-background">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer">
+            <img class="footer-logo" src="./webLogo/LOGO.png" alt="GoldCalis">
+            <div class="footer-group-container">
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Truyền thông
+                    </div>
+                    <div class="footer-group-content">
+                        <div class="footer-icon-link">
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Twitter-icon.png" alt="Twitter-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Facebook-icon.png" alt="Facebook-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Instargram-icon.png" alt="Instargram-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Youtube-icon.png" alt="Youtube-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Liên lạc
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">081-338-5858</a>
+                        <a class="footer-link" href="#">gcalis@gmail.com</a> 
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Thông tin
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">Chủ sở hữu</a>
+                        <a class="footer-link" href="#">Chính sách</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
