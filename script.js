@@ -67,7 +67,7 @@ function checkAuth(auth) {
         userNameHolder.innerHTML = notLogin;
         let path = window.location.pathname;
         if (path === "/userprofile.html" || path === "/userprofile.html#" || path === "/cart.html#" || path === "/cart.html" || path === "/checkout.html#" || path === "/checkout.html") {
-            window.location.replace("/dangnhap.html");   
+            window.location.replace("./dangnhap.html");   
         }
     }
 }
@@ -105,10 +105,10 @@ let user1ContainerDropDownContent = document.querySelector("#user1-container div
 const programContainer = document.getElementById("program-container");
 
 function checkOut() {
-    window.location.replace("/checkout.html");
+    window.location.replace("./checkout.html");
 }
 logo.addEventListener("click", () => {
-    window.location.replace("/index.html");
+    window.location.replace("./index.html");
 });
 
 hamburgerIcon.addEventListener("click", function() {
