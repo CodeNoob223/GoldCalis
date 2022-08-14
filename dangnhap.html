@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Alt L + Alt + O to open live server --> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldCalis</title>
+    <link rel="icon" type="image/png" href="./webLogo/goldenDumbell.png" sizes="16x16"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header-container">
+        <header style="justify-content: flex-start;">
+            <img class="logo" style="margin: 0 auto; height: 30px;" src="./webLogo/Logo.svg" alt="GoldCalis">
+        </header>
+    </div>
+
+    <div class="container loginandregister">
+        <div class="title login-title">Đăng nhập</div>
+        <div class="input-group login-group">
+            <input class="email-input" type="text" placeholder="Email">
+            <input class="password-input" type="password" placeholder="Mật khẩu">
+            <div class="checkbox-container">
+                <input type="checkbox" name="remember-pass">
+                <label for="remember-pass">Ghi nhớ mật khẩu</label>
+            </div>
+            <div class="button btn-info login-btn">
+                <span>Đăng nhập</span>
+            </div>
+            <p>Chưa có tài khoản? <span class="text-info pointer" onclick="toggleGroup()">Đăng ký</span></p>
+        </div>
+        <div class="title register-title hide">Đăng ký</div>
+        <div class="input-group register-group hide">
+            <input class="req-name-input" type="text" placeholder="Họ và tên">
+            <input class="req-email-input" type="text" placeholder="Email">
+            <input class="reg-phone-input" type="text" placeholder="Email">
+            <input class="req-password-input" type="password" placeholder="Mật khẩu">
+            <input class="req-retype-password-input" type="password" placeholder="Nhập lại mật khẩu">
+            <div class="checkbox-container">
+                <input type="checkbox" name="remember-pass">
+                <label for="remember-pass">Đồng ý với <span class="text-info pointer">điều khoản</span></label>
+            </div>
+            <div class="button btn-warning register-btn">
+                <span>Đăng ký</span>
+            </div>
+            <p>Đã có tài khoản? <span class="text-info pointer" onclick="toggleGroup()">Đăng nhập</span></p>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer">
+            <img class="footer-logo" src="./webLogo/LOGO.png" alt="GoldCalis">
+            <div class="footer-group-container">
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Truyền thông
+                    </div>
+                    <div class="footer-group-content">
+                        <div class="footer-icon-link">
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Twitter-icon.png" alt="Twitter-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Facebook-icon.png" alt="Facebook-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Instargram-icon.png" alt="Instargram-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Youtube-icon.png" alt="Youtube-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Liên lạc
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">081-338-5858</a>
+                        <a class="footer-link" href="#">gcalis@gmail.com</a> 
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Thông tin
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">Chủ sở hữu</a>
+                        <a class="footer-link" href="#">Chính sách</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginContainer = document.querySelector(".login-group");
+        const loginTitle = document.querySelector(".title.login-title");
+        const registerContainer = document.querySelector(".register-group");
+        const registerTitle = document.querySelector(".title.register-title");
+        async function checkLogin() {
+            const auth = JSON.parse(localStorage.getItem("auth"));
+            if (auth === true) {
+                window.location.replace("/index.html");
+            } else {
+                localStorage.setItem("auth", "false");
+            }
+        }
+        checkLogin();
+        function toggleGroup() {
+            loginContainer.classList.toggle("hide");
+            loginTitle.classList.toggle("hide");
+            registerContainer.classList.toggle("hide");
+            registerTitle.classList.toggle("hide");
+        }
+        const logo = document.querySelector('.logo');
+        logo.addEventListener("click", () => {
+            window.location.replace("/index.html");
+        });
+        const loginBtn = document.querySelector(".login-btn");
+        const registerBtn = document.querySelector(".register-btn");
+        loginBtn.addEventListener("click", () => {
+            window.location.replace("/index.html");
+            localStorage.setItem("auth","true");
+        });
+        registerBtn.addEventListener("click", () => {
+            window.location.replace("/index.html");
+            localStorage.setItem("auth","true");
+        });
+    </script>
+</body>
+</html>

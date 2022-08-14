@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Alt L + Alt + O to open live server --> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldCalis</title>
+    <link rel="icon" type="image/png" href="./webLogo/goldenDumbell.png" sizes="16x16"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <img src="./figma SVG icons/scroll-up-button.svg" alt="">
+    </div>
+    <div class="overlay program-checkout-overlay hide">
+        <div class="container checkout-card-information">
+            <div class="button-small btn-error program-pay-method-exit-btn" onclick="toggleOverLay()">
+                <span><img src="./figma SVG icons/exit.svg" alt=""></span>
+            </div>
+            <div class="title">Đăng ký</div>
+            <form class="pay-method program-pay-method" action="">
+                <p class="pay-method-title medium">Chọn giá:</p>
+                <input type="radio" name="subscribe-option" value="card" checked="checked">
+                <label class="pay-method-label" for="card">6 tháng - 5.000.000đ</label>
+                <br>
+                <input type="radio" name="subscribe-option" value="onlinebank">
+                <label class="pay-method-label" for="onlinebank">3 tháng - 2.000.000đ</label>
+                <br>
+                <input type="radio" name="subscribe-option" value="onlinebank">
+                <label class="pay-method-label" for="onlinebank">1 tháng - 1.000.000đ</label>
+                <div class="line invisible"></div>
+                <p class="pay-method-title medium">Chọn phương thức:</p>
+                <input type="radio" id="card" name="pay-method" value="card" checked="checked">
+                <label class="pay-method-label" for="card">Thẻ ngân hàng</label>
+                <br>
+                <input type="radio" id="onlinebank" name="pay-method" value="onlinebank">
+                <label class="pay-method-label" for="onlinebank">Online Banking</label>
+                <div class="input-group special">
+                    <input class="card-number-input" type="text" placeholder="Số thẻ">
+                </div>
+                <div class="input-group card-info-container">
+                    <input class="card-name-input" type="text" placeholder="Tên trên thẻ">
+                    <input class="card-date-input" type="date" placeholder="Ngày hết hạn">
+                    <input class="card-cvc-input" type="number" placeholder="Mã CVC">
+                </div>
+            </form>
+        </div>
+        <div class="container cart-product-total">
+            <div class="title">
+                Tổng cộng
+            </div>
+            <table>
+                <tr class="row-cal">
+                    <th class="col-discount col-title">Giảm</th>
+                    <td class="col-value">0đ</td>
+                </tr>
+                <tr class="row-cal">
+                    <th class="col-discount col-title">Vận chuyển</th>
+                    <td class="col-value">10.000đ</td>
+                </tr>
+                <tr class="row-cal">
+                    <th class="col-discount col-title">Giỏ hàng</th>
+                    <td class="col-value">300.000đ</td>
+                </tr>
+                <tr class="row-total">
+                    <th class="col-discount col-title">Tổng cộng</th>
+                    <td class="col-value">310.000đ</td>
+                </tr>
+            </table>
+            <div class="checkbox-group">
+                <input id="agreementcheckbox" type="checkbox" name="agreement" onchange="validate()">
+                <label for="agreement">Đồng ý với <span class="text-info">điều khoản của GoldCalis</span></label>
+            </div>
+            <div id="purchase-button" class="button btn-disable">
+                <span>Thanh toán <img src="./figma SVG icons/wallet.svg" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <header>
+            <img class="logo" src="./webLogo/Logo.svg" alt="GoldCalis">
+            
+            <nav id="nav-container">
+                <ul class="nav__links">
+                    <li id="user1-container" class="drop-down">
+                        <a class="drop-down-title">
+                            <img class="header-user-avatar" src="./figma SVG icons/user.svg" alt="">Minh Quân
+                            <span class="number-tag hide"></span>
+                        </a>
+                        <div class="drop-down-content" id="user1">
+                            <div class="drop-down-item cart hide">
+                                <a href="./cart.html">Giỏ hàng</a>
+                                <span class="number-tag"></span>
+                            </div>
+                            <div class="drop-down-item account hide">
+                                <a href="./userprofile.html">Tài khoản</a>
+                            </div>
+                            <div class="drop-down-item logout hide" onclick="logOut()">
+                                <a>Đăng xuất</a>
+                            </div>
+                            <div class="drop-down-item login">
+                                <a href="./dangnhap.html">Đăng nhập</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="shop-container" class="drop-down"> 
+                        <a href="./shop.html" class="drop-down-title">Shop</a>
+                    </li>
+                    
+                    <li id="program-container" class="drop-down">
+                        <a href="./program.html" class="drop-down-title">
+                            Chương trình
+                            <span class="new-tag">
+                                <img src="./figma SVG icons/new-tag.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li id="article-container" class="drop-down">
+                        <a href="./article.html" class="drop-down-title">Bài viết</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- User container -->
+            <li id="user-container" class="drop-down">
+                <a class="drop-down-title">
+                    <img class="header-user-avatar" src="./figma SVG icons/user.svg" alt="">
+                    <span class="number-tag hide"></span>
+                </a>
+                <div class="drop-down-content"  id="user">
+                    <div class="drop-down-item cart hide">
+                        <a href="./cart.html">Giỏ hàng</a>
+                        <span class="number-tag"></span>
+                    </div>
+                    <div class="drop-down-item account hide">
+                        <a href="./userprofile.html">Tài khoản</a>
+                    </div>
+                    <div class="drop-down-item logout hide" onclick="logOut()">
+                        <a>Đăng xuất</a>
+                    </div>
+                    <div class="drop-down-item login">
+                        <a href="./dangnhap.html">Đăng nhập</a>
+                    </div>
+                </div>
+            </li>
+            <div class="search-bar-container">
+                <input id="search-bar" type="text" placeholder="Tìm kiếm">
+                
+                <svg id="search-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <circle cx="22.5" cy="17.5" r="4.5" stroke="#8B8C8C" stroke-width="2"/>
+                    <path d="M19 21L13 27" stroke="#8B8C8C" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="hamburger-menu-container"> 
+                <svg id="hamburger-menu-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <g clip-path="url(#clip0_82_210)">
+                    <rect width="16" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 14)" fill="#8B8C8C"/>
+                    <rect width="11" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 21)" fill="#8B8C8C"/>
+                    <rect width="16" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 28)" fill="#8B8C8C"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_82_210">
+                    <rect width="16" height="16" fill="white" transform="translate(28 12) rotate(90)"/>
+                    </clipPath>
+                    </defs>
+                </svg>                        
+                
+                <svg id="close-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <rect width="16" height="2" transform="matrix(0.707107 0.707107 0.707107 -0.707107 13.636 15.0502)" fill="#8B8C8C"/>
+                    <rect x="26.364" y="15.0502" width="16" height="2" transform="rotate(135 26.364 15.0502)" fill="#8B8C8C"/>
+                </svg>
+            </div>
+        </header>
+    </div>
+    
+    <div class="program-container">
+        <div class="white-title">Chương trình</div>
+        <div class="white-line"></div>
+        <div class="program-container-content">
+            Các lịch trình, bài tập bài bản dành cho mọi đối tượng,được kèm 1-1 online với huấn luyện viên riêng
+        </div>
+        <div class="info-icon">
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Paraletes.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Dumbell.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Rings.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="search-content-container">
+        <input type="text" placeholder="Tìm kiếm">
+        <img src="./figma SVG icons/searchcontent.svg" alt="">
+    </div>
+
+    <div class="program-cards-container">
+        <div class="program-card">
+            <div class="program-card-image">
+                <img src="./desktop/Muscle.png" alt="">
+            </div>
+            <div class="program-card-info">
+                <div class="program-card-content-title">Muscle Up</div>
+                    <li>Lịch trình tập luyện bài bản</li>
+                    <li>Có huấn luyện viên riêng kèm 1-1</li>    
+                    <li>Có thể hủy đăng ký bất cứ lúc nào</li>
+                    <li>Tặng parralles cho người mới</li>
+                    <li>Độ khó: dễ</li>
+            </div>
+            <div class="program-card-content">
+                <div class="program-card-content-price"><span class="medium">Giá: </span>500.000đ / tháng</div>
+                <div class="program-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="program-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="program-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+                <div class="program-card-buttons-container">
+                    <div class="program-card-button-buy" onclick="toggleOverLay()">
+                        <span>Đăng ký</span>
+                        <img src="./figma SVG icons/sign-up.svg" alt="">
+                    </div>
+                    <div class="program-card-button-add">
+                        <img src="./figma SVG icons/add-cart.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="program-card">
+            <div class="program-card-image">
+                <img src="./desktop/Skill.png" alt="">
+            </div>
+            <div class="program-card-info">
+                <div class="program-card-content-title">Planche</div>
+                    <li>Lịch trình tập luyện bài bản</li>
+                    <li>Có huấn luyện viên riêng kèm 1-1</li>    
+                    <li>Có thể hủy đăng ký bất cứ lúc nào</li>
+                    <li>Tặng parralles cho người mới</li>
+                    <li>Độ khó: trung bình</li>
+            </div>
+            <div class="program-card-content">
+                <div class="program-card-content-price"><span class="medium">Giá: </span>500.000đ / tháng</div>
+                <div class="program-card-content-status"><span class="medium">Thời gian: </span>3 tháng</div>
+                <div class="program-card-content-sale"><span class="medium">Tiến độ: </span>10%</div>
+                <div class="program-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="program-card-buttons-container">
+                    <div class="program-card-button-continue">
+                        <span>Tiếp tục</span>
+                        <img src="./figma SVG icons/continue.svg" alt="">
+                    </div>
+                    <div class="program-card-button-rate">
+                        <img src="./figma SVG icons/rating.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="program-card">
+            <div class="program-card-image">
+                <img src="./desktop/back-lever.webp" alt="">
+            </div>
+            <div class="program-card-info">
+                <div class="program-card-content-title">Back lever</div>
+                    <li>Lịch trình tập luyện bài bản</li>
+                    <li>Có huấn luyện viên riêng kèm 1-1</li>    
+                    <li>Có thể hủy đăng ký bất cứ lúc nào</li>
+                    <li>Tặng parralles cho người mới</li>
+                    <li>Độ khó: trung bình</li>
+            </div>
+            <div class="program-card-content">
+                <div class="program-card-content-price"><span class="medium">Giá: </span>500.000đ / tháng</div>
+                <div class="program-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="program-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="program-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+                <div class="program-card-buttons-container">
+                    <div class="program-card-button-buy" onclick="toggleOverLay()">
+                        <span>Đăng ký</span>
+                        <img src="./figma SVG icons/sign-up.svg" alt="">
+                    </div>
+                    <div class="program-card-button-add">
+                        <img src="./figma SVG icons/add-cart.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="program-card">
+            <div class="program-card-image">                                                                             
+                <img src="./desktop/front-lever.jpg" alt="">
+            </div>
+            <div class="program-card-info">
+                <div class="program-card-content-title">Front lever</div>
+                    <li>Lịch trình tập luyện bài bản</li>
+                    <li>Có huấn luyện viên riêng kèm 1-1</li>    
+                    <li>Có thể hủy đăng ký bất cứ lúc nào</li>
+                    <li>Tặng parralles cho người mới</li>
+                    <li>Độ khó: trung bình</li>
+            </div>
+            <div class="program-card-content">
+                <div class="program-card-content-price"><span class="medium">Giá: </span>500.000đ / tháng</div>
+                <div class="program-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="program-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="program-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+                <div class="program-card-buttons-container">
+                    <div class="program-card-button-buy" onclick="toggleOverLay()">
+                        <span>Đăng ký</span>
+                        <img src="./figma SVG icons/sign-up.svg" alt="">
+                    </div>
+                    <div class="program-card-button-add">
+                        <img src="./figma SVG icons/add-cart.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="program-card">
+            <div class="program-card-image">
+                <img src="./desktop/ArmWrestling.png" alt="">
+            </div>
+            <div class="program-card-info">
+                <div class="program-card-content-title">Vật tay</div>
+                    <li>Lịch trình tập luyện bài bản</li>
+                    <li>Có huấn luyện viên riêng kèm 1-1</li>    
+                    <li>Có thể hủy đăng ký bất cứ lúc nào</li>
+                    <li>Tặng parralles cho người mới</li>
+                    <li>Độ khó: khó</li>
+            </div>
+            <div class="program-card-content">
+                <div class="program-card-content-price"><span class="medium">Giá: </span>500.000đ / tháng</div>
+                <div class="program-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="program-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="program-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+                <div class="program-card-buttons-container">
+                    <div class="program-card-button-buy" onclick="toggleOverLay()">
+                        <span>Đăng ký</span>
+                        <img src="./figma SVG icons/sign-up.svg" alt="">
+                    </div>
+                    <div class="program-card-button-add">
+                        <img src="./figma SVG icons/add-cart.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container page-number">
+        <div class="number-block">1</div>
+        <div class="number-block">2</div>
+        <div class="number-block">3</div>
+        <div class="number-block">
+            <img src="./figma SVG icons/arrowright.svg" alt="">
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <img class="footer-logo" src="./webLogo/LOGO.png" alt="GoldCalis">
+            <div class="footer-group-container">
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Truyền thông
+                    </div>
+                    <div class="footer-group-content">
+                        <div class="footer-icon-link">
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Twitter-icon.png" alt="Twitter-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Facebook-icon.png" alt="Facebook-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Instargram-icon.png" alt="Instargram-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Youtube-icon.png" alt="Youtube-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Liên lạc
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">081-338-5858</a>
+                        <a class="footer-link" href="#">gcalis@gmail.com</a> 
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Thông tin
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">Chủ sở hữu</a>
+                        <a class="footer-link" href="#">Chính sách</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        let overlay = document.querySelector(".overlay");
+        function toggleOverLay() {
+            overlay.classList.toggle("hide");
+        }
+
+        let checkBox = document.getElementById("agreementcheckbox");
+        let purchaseBtn = document.getElementById("purchase-button");
+        function validate() {
+            if (checkBox.checked) {
+                purchaseBtn.classList.add("btn-warning");
+                purchaseBtn.classList.remove("btn-disable");
+            } else {
+                purchaseBtn.classList.add("btn-disable");
+                purchaseBtn.classList.remove("btn-warning");
+            }
+        }
+    </script>
+</body>
+</html>

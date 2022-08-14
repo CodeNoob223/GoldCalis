@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Alt L + Alt + O to open live server --> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldCalis</title>
+    <link rel="icon" type="image/png" href="./webLogo/goldenDumbell.png" sizes="16x16"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <img src="./figma SVG icons/scroll-up-button.svg" alt="">
+    </div>
+    <div class="overlay hide">
+        <div class="container product-detailed-info-overlay">
+            <div class="product-detail-container">
+                <div class="product-detail-image">
+                    <img src="./desktop/parallettes.webp" alt="">
+                </div>
+                <div class="product-detail-infos">
+                    <div class="product-detail-name bold">
+                        Parallettes
+                    </div>
+                    <div class="product-detail-price product-detail-info">
+                        <span class="medium">Giá: </span>100.000đ
+                    </div>
+                    <div class="product-detail-status product-detail-info">
+                        <span class="medium">Trạng thái: </span><span class="text-success">Còn hàng</span>
+                    </div>
+                    <div class="product-detail-rating product-detail-info">
+                        <span class="medium">Đánh giá: </span>4.5 <img class="product-detail-star" src="./figma SVG icons/gold-star.svg" alt="">
+                    </div>
+                    <div class="product-detail-sales product-detail-info">
+                        <span class="medium">Lượt mua: </span>5023
+                    </div>
+                    <div class="shop-card-buttons-container">
+                        <div class="shop-card-button-buy">
+                            <span>Mua ngay</span>
+                            <img src="./figma SVG icons/shop-cart.svg" alt="">
+                        </div>
+                        <div class="shop-card-button-add">
+                            <img src="./figma SVG icons/add-cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-detail-buttons-container">
+                    <div id="product-detail-exit-btn" class="button-small btn-error" onclick="toggleOverLay()">
+                        <span><img src="./figma SVG icons/exit.svg" alt=""></span>
+                    </div>
+                    <div class="button-small btn-secondary special">
+                        <span><img src="./figma SVG icons/shareblack.svg" alt=""></span>
+                    </div>
+                    <div class="button-small btn-secondary">
+                        <span><img src="./figma SVG icons/starblack.svg" alt=""></span>
+                    </div>
+                    <div class="button-small btn-secondary">
+                        <span><img src="./figma SVG icons/comment.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-origin-container">
+                <table>
+                    <tr>
+                        <th class="col-title">Xuất xứ:</th>
+                        <td class="col-text">Việt Nam</td>
+                    </tr>
+                    <tr>
+                        <th class="col-title">Chất liệu:</th>
+                        <td class="col-text">Gỗ</td>
+                    </tr>
+                    <tr>
+                        <th class="col-title">Hãng:</th>
+                        <td class="col-text">GoldCalis</td>
+                    </tr>
+                    <tr>
+                        <th class="col-title">Kích thước:</th>
+                        <td class="col-text">r20 x d40 x c30cm</td>
+                    </tr>
+                    <tr>
+                        <th class="col-title">Cân nặng:</th>
+                        <td class="col-text">4kg / 1 cái</td>
+                    </tr>
+                    <tr>
+                        <th class="col-title">Công dụng:</th>
+                        <td class="col-text">Tập skill calisthenic</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="product-comment-section">
+                <div class="product-comment">
+                    <div class="product-comment-avatar">
+                        <img src="./figma SVG icons/placeholder55.png" alt="">
+                    </div>
+                    <div class="product-comment-info">
+                        <div class="product-comment-name medium">
+                            Đình Hải
+                            <span class="product-comment-name-rating">
+                                5 <img src="./figma SVG icons/startiny.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="product-comment-comment">Ờ, dùng cũng hay.</div>
+                    </div>
+                    <div class="product-comment-buttons-container">
+                        <div class="button-tiny btn-info">
+                            <span><img src="./figma SVG icons/liketiny.svg" alt=""></span>
+                        </div>
+                        <div class="button-tiny btn-error">
+                            <span><img src="./figma SVG icons/disliketiny.svg" alt=""></span>
+                        </div>
+                        <div class="button-tiny btn-secondary">
+                            <span><img src="./figma SVG icons/flagtiny.svg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-comment">
+                    <div class="product-comment-avatar">
+                        <img src="./figma SVG icons/placeholder55.png" alt="">
+                    </div>
+                    <div class="product-comment-info">
+                        <div class="product-comment-name medium">
+                            Quốc Anh
+                            <span class="product-comment-name-rating">
+                                5 <img src="./figma SVG icons/startiny.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="product-comment-comment">Sản phẩm rất tuyệt vời</div>
+                    </div>
+                    <div class="product-comment-buttons-container">
+                        <div class="button-tiny btn-info">
+                            <span><img src="./figma SVG icons/liketiny.svg" alt=""></span>
+                        </div>
+                        <div class="button-tiny btn-error">
+                            <span><img src="./figma SVG icons/disliketiny.svg" alt=""></span>
+                        </div>
+                        <div class="button-tiny btn-secondary">
+                            <span><img src="./figma SVG icons/flagtiny.svg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <header>
+            <img class="logo" src="./webLogo/Logo.svg" alt="GoldCalis">
+            
+            <nav id="nav-container">
+                <ul class="nav__links">
+                    <li id="user1-container" class="drop-down">
+                        <a class="drop-down-title">
+                            <img class="header-user-avatar" src="./figma SVG icons/user.svg" alt="">Minh Quân
+                            <span class="number-tag hide"></span>
+                        </a>
+                        <div class="drop-down-content" id="user1">
+                            <div class="drop-down-item cart hide">
+                                <a href="./cart.html">Giỏ hàng</a>
+                                <span class="number-tag"></span>
+                            </div>
+                            <div class="drop-down-item account hide">
+                                <a href="./userprofile.html">Tài khoản</a>
+                            </div>
+                            <div class="drop-down-item logout hide" onclick="logOut()">
+                                <a>Đăng xuất</a>
+                            </div>
+                            <div class="drop-down-item login">
+                                <a href="./dangnhap.html">Đăng nhập</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="shop-container" class="drop-down"> 
+                        <a href="./shop.html" class="drop-down-title">Shop</a>
+                    </li>
+                    
+                    <li id="program-container" class="drop-down">
+                        <a href="./program.html" class="drop-down-title">
+                            Chương trình
+                            <span class="new-tag">
+                                <img src="./figma SVG icons/new-tag.svg" alt="">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li id="article-container" class="drop-down">
+                        <a href="./article.html" class="drop-down-title">Bài viết</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- User container -->
+            <li id="user-container" class="drop-down">
+                <a class="drop-down-title">
+                    <img class="header-user-avatar" src="./figma SVG icons/user.svg" alt="">
+                    <span class="number-tag hide"></span>
+                </a>
+                <div class="drop-down-content"  id="user">
+                    <div class="drop-down-item cart hide">
+                        <a href="./cart.html">Giỏ hàng</a>
+                        <span class="number-tag"></span>
+                    </div>
+                    <div class="drop-down-item account hide">
+                        <a href="./userprofile.html">Tài khoản</a>
+                    </div>
+                    <div class="drop-down-item logout hide" onclick="logOut()">
+                        <a>Đăng xuất</a>
+                    </div>
+                    <div class="drop-down-item login">
+                        <a href="./dangnhap.html">Đăng nhập</a>
+                    </div>
+                </div>
+            </li>
+            <div class="search-bar-container">
+                <input id="search-bar" type="text" placeholder="Tìm kiếm">
+                
+                <svg id="search-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <circle cx="22.5" cy="17.5" r="4.5" stroke="#8B8C8C" stroke-width="2"/>
+                    <path d="M19 21L13 27" stroke="#8B8C8C" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="hamburger-menu-container"> 
+                <svg id="hamburger-menu-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <g clip-path="url(#clip0_82_210)">
+                    <rect width="16" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 14)" fill="#8B8C8C"/>
+                    <rect width="11" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 21)" fill="#8B8C8C"/>
+                    <rect width="16" height="2" transform="matrix(1 1.86502e-07 1.63918e-07 -1 12 28)" fill="#8B8C8C"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_82_210">
+                    <rect width="16" height="16" fill="white" transform="translate(28 12) rotate(90)"/>
+                    </clipPath>
+                    </defs>
+                </svg>                        
+                
+                <svg id="close-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#2D2F30"/>
+                    <rect width="16" height="2" transform="matrix(0.707107 0.707107 0.707107 -0.707107 13.636 15.0502)" fill="#8B8C8C"/>
+                    <rect x="26.364" y="15.0502" width="16" height="2" transform="rotate(135 26.364 15.0502)" fill="#8B8C8C"/>
+                </svg>
+            </div>
+        </header>
+    </div>
+    
+    <div class="shop-container">
+        <div class="white-title">Cửa hàng</div>
+        <div class="white-line"></div>
+        <div class="shop-container-content">
+            Những sản phẩm, thực phẩm mà các vận động viện, huấn luyện viên
+            tin tưởng và sử dụng trong việc luyện tập của họ
+        </div>
+        <div class="info-icon">
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Paraletes.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Dumbell.png" alt="">
+            </div>
+            <div class="icon-container">
+                <img class="icon" src="./desktop/Rings.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="search-content-container">
+        <input type="text" placeholder="Tìm kiếm">
+        <img src="./figma SVG icons/searchcontent.svg" alt="">
+    </div>
+
+    <div class="shop-cards-container">
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/Protein-bar-snack-chocolate-ALMOND.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Bánh đạm</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/parallettes.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Parallettes</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/weightvest.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Áo tạ</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>1.000.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/rings.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Rings</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/whey_.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Whey</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/dumbell.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Tạ tay</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/ankle-sandbag.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Tạ chân</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/pullupbar.webp" alt="">
+            </div>
+            <div class="shop-card-content">
+                <div class="shop-card-content-title">Xà gắn tường</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <div class="shop-card-image">
+                <img src="./desktop/Vitamin-B.webp" alt="">
+            </div>
+            <div class="shop-card-content" onclick="toggleOverLay()">
+                <div class="shop-card-content-title">Vitamin B</div>
+                <div class="shop-card-content-price"><span class="medium">Giá: </span>100.000đ</div>
+                <div class="shop-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                <div class="shop-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                <div class="shop-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+            </div>
+            <div class="shop-card-buttons-container">
+                <div class="shop-card-button-buy">
+                    <span>Mua ngay</span>
+                    <img src="./figma SVG icons/shop-cart.svg" alt="">
+                </div>
+                <div class="shop-card-button-add">
+                    <img src="./figma SVG icons/add-cart.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page-number">
+        <div class="number-block">1</div>
+        <div class="number-block">2</div>
+        <div class="number-block">3</div>
+        <div class="number-block">
+            <img src="./figma SVG icons/arrowright.svg" alt="">
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer">
+            <img class="footer-logo" src="./webLogo/LOGO.png" alt="GoldCalis">
+            <div class="footer-group-container">
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Truyền thông
+                    </div>
+                    <div class="footer-group-content">
+                        <div class="footer-icon-link">
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Twitter-icon.png" alt="Twitter-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Facebook-icon.png" alt="Facebook-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Instargram-icon.png" alt="Instargram-icon">
+                            </a>
+                            <a href="#" class="icon-link">
+                                <img src="./desktop/Youtube-icon.png" alt="Youtube-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Liên lạc
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">081-338-5858</a>
+                        <a class="footer-link" href="#">gcalis@gmail.com</a> 
+                    </div>
+                </div>
+                <div class="footer-group">
+                    <div class="footer-group-title">
+                        Thông tin
+                    </div>
+                    <div class="footer-group-content">
+                        <a class="footer-link" href="#">Chủ sở hữu</a>
+                        <a class="footer-link" href="#">Chính sách</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        let overlay = document.querySelector(".overlay");
+
+        function toggleOverLay() {
+            overlay.classList.toggle("hide")
+        }
+    </script>
+</body>
+</html>
