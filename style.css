@@ -1527,7 +1527,22 @@ nav {
 .col-status {width: 60%; min-width: 200px;}
 .col-status > p {margin-right: auto;}
 .custom-row.single-col {width: 100%;}
-.custom-row.single-col > .exercise-row {display: flex; width: 100%; background-color: #8B8C8C; height: 128px; overflow-x: scroll; padding: 0; transition: all 0.3s ease-in;}
+.custom-row.single-col::-webkit-scrollbar {
+    display: none;
+}
+.custom-row.single-col > .exercise-row {
+    display: flex; width: 100%; 
+    background-color: #8B8C8C; 
+    height: 128px; 
+    overflow-x: scroll; 
+    padding: 0; 
+    transition: all 0.3s ease-in; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.custom-row.single-col > .exercise-row::-webkit-scrollbar {
+    display: none;
+}
 .drop-down-btn {width: 22px; height: 22px; cursor: pointer; transition: all 0.3s ease-in;}
 .exercise-card {
     background-color: #4f4f4f;
