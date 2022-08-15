@@ -15,7 +15,7 @@
     </div>
     <div class="overlay program-checkout-overlay hide">
         <div class="container checkout-card-information">
-            <div class="button-small btn-error program-pay-method-exit-btn" onclick="toggleOverLay()">
+            <div class="button-small btn-error program-pay-method-exit-btn" onclick="toggleOverLay2()">
                 <span><img src="./figma SVG icons/exit.svg" alt=""></span>
             </div>
             <div class="title">Đăng ký</div>
@@ -77,6 +77,351 @@
             </div>
         </div>
     </div>
+    <div class="overlay program-detailed-card hide">
+        <div class="container">
+            <div style="z-index: 1" class="button-small btn-error program-pay-method-exit-btn" onclick="toggleOverLay()">
+                <span><img src="./figma SVG icons/exit.svg" alt=""></span>
+            </div>
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="./desktop/Muscle.png" alt="">
+                </div>
+                <div class="program-card-info">
+                    <div class="program-card-content-title">Muscle Up</div>
+                    <li>Lịch trình tập luyện bài bản</li>
+                    <li>Có huấn luyện viên riêng kèm 1-1</li>    
+                    <li>Có thể hủy đăng ký bất cứ lúc nào</li>
+                    <li>Tặng parralles cho người mới</li>
+                    <li>Độ khó: dễ</li>
+                </div>
+                <div class="program-card-content">
+                    <div class="program-card-content-price"><span class="medium">Giá: </span>500.000đ / tháng</div>
+                    <div class="program-card-content-status"><span class="medium">Trạng thái: </span>Còn hàng</div>
+                    <div class="program-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
+                    <div class="program-card-content-sale"><span class="medium">Lượt mua: </span>5023</div>
+                    <div class="program-card-buttons-container">
+                        <div class="program-card-button-buy" onclick="toggleOverLay2()">
+                            <span>Đăng ký</span>
+                            <img src="./figma SVG icons/sign-up.svg" alt="">
+                        </div>
+                        <div class="program-card-button-add">
+                            <img src="./figma SVG icons/add-cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select-containers">
+                <div class="select-container">
+                    <img src="./figma SVG icons/smallblocker.svg" alt="" class="blocker">
+                    <select class="custom-select" name="level" id="level">
+                        <option value="1">Level 1</option>
+                        <option value="2">Level 2</option>
+                        <option value="3">Level 3</option>
+                        <option value="4">Level 4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <img src="./figma SVG icons/smallblocker.svg" alt="" class="blocker">
+                    <select class="custom-select" name="week" id="week">
+                        <option value="1">Tuần 1</option>
+                        <option value="2">Tuần 2</option>
+                        <option value="3">Tuần 3</option>
+                        <option value="4">Tuần 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="custom-table-container special">
+                <div class="big-blocker">
+                    <p><img src="./figma SVG icons/bigblocker.svg" alt=""></p>
+                    <p>Bạn chưa đăng ký.</p>
+                </div>
+                <div class="custom-table plan-table">
+                    <div class="custom-row">
+                        <div class="custom-col col-title col-date">
+                            Ngày
+                        </div>
+                        <div class="custom-col col-title col-progress">
+                            Tiến độ
+                        </div>
+                        <div class="custom-col col-title col-status">
+                            Trạng thái
+                        </div>
+                    </div>
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 1
+                        </div>
+                        <div class="custom-col col-progress">
+                            0%
+                        </div>
+                        <div class="custom-col col-status">
+                            <p class="text-error">Chưa tập</p>
+                            <img class="drop-down-btn flip-vertical" src="./figma SVG icons/arrowup.svg" onclick="openProgram(this)" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-row single-col">
+                        <div class="custom-col exercise-row">
+                            <div class="exercise-card">
+                                <p>Body row</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Negative pullup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Deadhang</p>
+                                <p>20seconds</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Chinup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Jump pullup</p>
+                                <p>3 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 2
+                        </div>
+                        <div class="custom-col col-progress">
+                            0%
+                        </div>
+                        <div class="custom-col col-status text-warning">
+                            <p class="text-error">Chưa tập</p>
+                            <img class="drop-down-btn" src="./figma SVG icons/arrowup.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 3
+                        </div>
+                        <div class="custom-col col-progress">
+                            0%
+                        </div>
+                        <div class="custom-col col-status text-warning">
+                            <p class="text-error">Chưa tập</p>
+                            <img class="drop-down-btn" src="./figma SVG icons/arrowup.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 4
+                        </div>
+                        <div class="custom-col col-progress">
+                            0%
+                        </div>
+                        <div class="custom-col col-status text-warning">
+                            <p class="text-error">Chưa tập</p>
+                            <img class="drop-down-btn" src="./figma SVG icons/arrowup.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 5
+                        </div>
+                        <div class="custom-col col-progress">
+                            0%
+                        </div>
+                        <div class="custom-col col-status text-warning">
+                            <p class="text-error">Chưa tập</p>
+                            <img class="drop-down-btn" src="./figma SVG icons/arrowup.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay program-detailed-card bought hide">
+        <div class="container">
+            <div style="z-index: 1" class="button-small btn-error program-pay-method-exit-btn" onclick="toggleOverLay3()">
+                <span><img src="./figma SVG icons/exit.svg" alt=""></span>
+            </div>
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="./desktop/Muscle.png" alt="">
+                </div>
+                <div class="program-card-info" style="border: none">
+                    <div class="program-card-content-title">Muscle Up</div>
+                    <p style="margin: 4px 0">Huấn luyện viên: <span class="text-success">Trực tuyến</span></p>
+                    <p style="margin: 4px 0">Tiến độ: <span class="text-warning">12%</span></p>
+                    <p style="margin: 4px 0">Thời gian còn lại: <span>3 tháng</span></p>
+                    <div class="button-container" style="display: flex; margin-top: 20px;">
+                        <div style="width: 108px; margin-right: 8px" class="button btn-primary">
+                            <span>Bắt đầu <img src="./figma SVG icons/callcoach.svg" alt=""></span>
+                        </div>
+                        <div style="width: 108px" class="button btn-warning" onclick="toggleOverLay2()">
+                            <span>Gia hạn <img src="./figma SVG icons/wallet.svg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select-containers">
+                <div class="select-container">
+                    <select class="custom-select" name="level" id="level">
+                        <option value="1">Level 1</option>
+                        <option value="2">Level 2</option>
+                        <option value="3">Level 3</option>
+                        <option value="4">Level 4</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <select class="custom-select" name="week" id="week">
+                        <option value="1">Tuần 1</option>
+                        <option value="2">Tuần 2</option>
+                        <option value="3">Tuần 3</option>
+                        <option value="4">Tuần 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="custom-table-container">
+                <div class="custom-table plan-table">
+                    <div class="custom-row">
+                        <div class="custom-col col-title col-date">
+                            Ngày
+                        </div>
+                        <div class="custom-col col-title col-progress">
+                            Tiến độ
+                        </div>
+                        <div class="custom-col col-title col-status">
+                            Trạng thái
+                        </div>
+                    </div>
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 1
+                        </div>
+                        <div class="custom-col col-progress">
+                            100%
+                        </div>
+                        <div class="custom-col col-status">
+                            <p class="text-success">Đã tập</p>
+                            <img class="drop-down-btn" src="./figma SVG icons/arrowup.svg" onclick="openProgram(this)" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-row single-col">
+                        <div class="custom-col exercise-row close">
+                            <div class="exercise-card">
+                                <p>Body row</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Negative pullup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Deadhang</p>
+                                <p>20seconds</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Chinup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Jump pullup</p>
+                                <p>3 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 2
+                        </div>
+                        <div class="custom-col col-progress">
+                            0%
+                        </div>
+                        <div class="custom-col col-status">
+                            <p class="text-error">Chưa tập</p>
+                            <img class="drop-down-btn" src="./figma SVG icons/arrowup.svg" onclick="openProgram(this)" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-row single-col">
+                        <div class="custom-col exercise-row close">
+                            <div class="exercise-card">
+                                <p>Body row</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Negative pullup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Deadhang</p>
+                                <p>20seconds</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Chinup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Jump pullup</p>
+                                <p>3 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                        </div>
+                    </div>     
+                    <div class="custom-row">
+                        <div class="custom-col col-date">
+                            Ngày 3
+                        </div>
+                        <div class="custom-col col-progress">
+                            0%
+                        </div>
+                        <div class="custom-col col-status">
+                            <p class="text-error">Chưa tập</p>
+                            <img class="drop-down-btn" src="./figma SVG icons/arrowup.svg" onclick="openProgram(this)" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-row single-col">
+                        <div class="custom-col exercise-row close">
+                            <div class="exercise-card">
+                                <p>Body row</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Negative pullup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Deadhang</p>
+                                <p>20seconds</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Chinup</p>
+                                <p>10 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                            <div class="exercise-card">
+                                <p>Jump pullup</p>
+                                <p>3 reps</p>
+                                <p>3 sets</p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="header-container">
         <header>
             <img class="logo" src="./webLogo/Logo.svg" alt="GoldCalis">
@@ -109,7 +454,7 @@
                     </li>
                     
                     <li id="program-container" class="drop-down">
-                        <a href="./program.html" class="drop-down-title">
+                        <a href="./program.html" class="drop-down-title gold">
                             Chương trình
                             <span class="new-tag">
                                 <img src="./figma SVG icons/new-tag.svg" alt="">
@@ -250,7 +595,7 @@
                 <div class="program-card-content-sale"><span class="medium">Tiến độ: </span>10%</div>
                 <div class="program-card-content-rating"><span class="medium">Đánh giá: </span>4.5 <img src="./figma SVG icons/gold-star.svg" alt=""></div>
                 <div class="program-card-buttons-container">
-                    <div class="program-card-button-continue">
+                    <div class="program-card-button-continue" onclick="toggleOverLay3()">
                         <span>Tiếp tục</span>
                         <img src="./figma SVG icons/continue.svg" alt="">
                     </div>
@@ -404,10 +749,12 @@
     </div>
     <script src="./script.js"></script>
     <script>
-        let overlay = document.querySelector(".overlay");
-        function toggleOverLay() {
-            overlay.classList.toggle("hide");
-        }
+        let overlay1 = document.querySelector(".overlay.program-detailed-card")
+        let overlay2 = document.querySelector(".overlay.program-checkout-overlay");
+        let overlay3 = document.querySelector(".overlay.program-detailed-card.bought");
+        function toggleOverLay() {overlay1.classList.toggle("hide");}
+        function toggleOverLay2() {overlay2.classList.toggle("hide");}
+        function toggleOverLay3() {overlay3.classList.toggle("hide");}
 
         let checkBox = document.getElementById("agreementcheckbox");
         let purchaseBtn = document.getElementById("purchase-button");
@@ -419,6 +766,11 @@
                 purchaseBtn.classList.add("btn-disable");
                 purchaseBtn.classList.remove("btn-warning");
             }
+        }
+        async function openProgram(element) {
+            let programRow = await element.parentElement.parentElement.nextElementSibling.firstElementChild;
+            programRow.classList.toggle("close");   
+            element.classList.toggle("flip-vertical")
         }
     </script>
 </body>

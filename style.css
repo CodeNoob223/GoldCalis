@@ -194,6 +194,8 @@ form.pay-method.program-pay-method > input:nth-child(even) {margin-right: 0;}
 .bold {font-family: Roboto-Bold;}
 .medium {font-family: Roboto-Medium;}
 .hide {display: none !important;}
+.flip-vertical {transform: scaleY(-1) !important;}
+.flip-horizontal {transform: scaleX(-1) !important;}
 .invisible {visibility: hidden !important;}
 .gold {color: var(--primary-color)}
 .new-tag {
@@ -237,6 +239,48 @@ form.pay-method.program-pay-method > input:nth-child(even) {margin-right: 0;}
     height: 100%;   
 }
 
+.select-containers {
+    display: flex;
+}
+
+.select-container {
+    position: relative;
+    height: max-content;
+    width: max-content;
+}
+
+.select-container > select {
+    height: 36px;
+    width: 114px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    margin: 0px 12px 4px 0;
+    padding: 6px;
+}
+.blocker {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: not-allowed;
+}
+.big-blocker {
+    display: block;
+    position: absolute;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24;
+    font-family: Roboto-Medium;
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, 0.5);
+}
 .header-container {
     width: 100%;
     position: sticky;
@@ -626,6 +670,7 @@ nav {
     background: black;
     text-align: center;
     padding-top: 3.25rem;
+    overflow-x: scroll;
 }
 
 .white-title {
@@ -827,10 +872,16 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.697);
     z-index: 200;
+    -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
 }
+.overlay::-webkit-scrollbar {
+    display: none;
+}
+
 .container.float-article {
     margin: 2vh auto;
     height: 95vh;
@@ -869,6 +920,7 @@ nav {
     background: black;
     text-align: center;
     padding-top: 3.25rem;
+    overflow-x: scroll;
 }
 
 .article-container-content {
@@ -1042,6 +1094,7 @@ nav {
     background: black;
     text-align: center;
     padding-top: 3.25rem;
+    overflow-x: scroll;
 }
 
 .shop-container-content {
@@ -1194,13 +1247,13 @@ nav {
 
 /* program */ /* program */ /* program */
 /* program */ /* program */ /* program */
-
 .program-container {
     height: 25rem;
     width: 100%;
     background: black;
     text-align: center;
     padding-top: 3.25rem;
+    overflow-x: scroll;
 }
 
 .program-container-content {
@@ -1298,15 +1351,14 @@ nav {
 
 .program-card-button-buy:hover {
     cursor: pointer;
-    background: var(--primary-color-hover); 
-    /* h#0081e4 a#005ba1 */
+    background: var(--info-color-hover); 
     padding-left: -4rem !important;
     transition: all 0.3s ease-in;
 }
 
 .program-card-button-buy:active {
     cursor: pointer;
-    background: var(--primary-color-active);
+    background: var(--info-color-active);
     padding-left: -3.75rem !important;
     transition: all 0.1s ease-in;
 }
@@ -1425,10 +1477,72 @@ nav {
     transition: all 0.3s;
 }
 
-.overlay.program-checkout-overlay {overflow: scroll;}
+.overlay.program-checkout-overlay {overflow: scroll; height: 100vh; z-index: 102;}
 .overlay.program-checkout-overlay > .container {position: relative;}
 .program-pay-method-exit-btn {position: absolute; right: 24px; top: 24px}
+.program-pay-method-exit-btn > span > img {transform: translate(5px,5px);}
 
+
+.overlay.program-detailed-card {
+    z-index: 101;
+    overflow: scroll;
+    height: 100vh;
+    padding: 0;
+}
+.overlay.program-detailed-card > .container {
+    max-width: 739px;
+    width: 98vw;
+    height: 90%;
+    overflow: scroll;
+}
+.overlay.program-detailed-card > .container > .program-card {
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    height: max-content;
+    min-height: 0px;
+    height: 182px;
+    overflow: visible;
+    border-radius: 0px;
+}
+.overlay.program-detailed-card > .container > .program-card > .program-card-info {
+    margin-right: auto;
+}
+
+.overlay.program-detailed-card > .container > .program-card > .program-card-content {
+    width: 162px;
+    padding-top: 36px;
+}
+
+.custom-table-container {position: relative; margin: 16px 0;width: 100%; height: max-content; overflow-x: scroll; border-radius: 8px;}
+.custom-table-container.special {overflow-x: hidden; overflow: hidden;}
+.custom-table {width: 100%; min-width: 600px; height: max-content; padding: 0; border-radius: 8px;}
+.custom-table > .custom-row:nth-child(odd) {background-color: white; width: 100%;}
+.custom-table > .custom-row:nth-child(even) {background-color: #F8F6F5; width: 100%;}
+.custom-row {display: flex; width: 100%;}
+.custom-col {padding: 8px 12px; display: flex;}
+.custom-col.col-title {font-family: Roboto-Bold;}
+.col-date {width: 20%; min-width: 120px;}
+.col-progress {width: 20%; min-width: 120px;}
+.col-status {width: 60%; min-width: 200px;}
+.col-status > p {margin-right: auto;}
+.custom-row.single-col {width: 100%;}
+.custom-row.single-col > .exercise-row {display: flex; width: 100%; background-color: #8B8C8C; height: 128px; overflow-x: scroll; padding: 0; transition: all 0.3s ease-in;}
+.drop-down-btn {width: 22px; height: 22px; cursor: pointer; transition: all 0.3s ease-in;}
+.exercise-card {
+    background-color: #4f4f4f;
+    height: 104px;
+    min-width: 180px;
+    width: 180px;
+    margin: 12px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    padding: 9px;
+}
+.exercise-card > p {margin: 0px 0 12px 0; white-space: nowrap;}
+.exercise-card > p:last-child {margin: 0px}
+.close {height: 0px !important;}
 /* SEARCH CONTENT */ /* SEARCH CONTENT */ /* SEARCH CONTENT */
 /* SEARCH CONTENT */ /* SEARCH CONTENT */ /* SEARCH CONTENT */
 .search-content-container {
@@ -1601,7 +1715,7 @@ nav {
 .container {
     position: relative;
     height: max-content;
-    width: 80vw;
+    width: 80%;
     max-width: 952px;
     margin: 32px auto 0 auto;
     padding: 24px;
@@ -1857,7 +1971,7 @@ form.pay-method > .input-group {width: 100%;}
 form.pay-method > .special > .card-number-input {width: 100%; margin-right: 0 !important;}
 .input-group.card-info-container > .card-name-input {width: 40%;}
 .card-date-input {width: 29%; margin-right: 12px;}
-.card-cvc-input {width: 27%;}
+.card-cvc-input {width: 30%; margin-right: 0;}
 
 /* PRODUCT PAGE */ /* PRODUCT PAGE */ /* PRODUCT PAGE */
 /* PRODUCT PAGE */ /* PRODUCT PAGE */ /* PRODUCT PAGE */
@@ -2150,7 +2264,7 @@ form.pay-method > .special > .card-number-input {width: 100%; margin-right: 0 !i
         transition: all 0.5s ease-in;
     }
     #search-bar.active {
-        width: 18rem;
+        width: 100%;
         transition: all 0.5s ease-out;
     }
     nav.active {
@@ -2190,7 +2304,7 @@ form.pay-method > .special > .card-number-input {width: 100%; margin-right: 0 !i
     .icon {
         width: 100%;
     }
-    .container {width: 90vw;}
+    .container {width: 80vw;}
 
     .user-profile-info-container {
         flex-direction: column;
@@ -2212,6 +2326,7 @@ form.pay-method > .special > .card-number-input {width: 100%; margin-right: 0 !i
 }
 
 @media (max-width: 790px) {
+    .overlay.program-detailed-card > .container > .program-card > .program-card-content {padding-top: 0;}
     .program-cards-container {width: 90vw; display: flex; flex-wrap: wrap; justify-content: space-between; min-width: 320px; padding: 0;}
     .program-card {
         width: 48%;
@@ -2224,6 +2339,7 @@ form.pay-method > .special > .card-number-input {width: 100%; margin-right: 0 !i
         position: relative;
         margin-top: 24px;
     }
+    .overlay.program-detailed-card > .container > .program-card {height: max-content;}
 }
 
 @media (max-width: 768px) {
@@ -2438,14 +2554,14 @@ form.pay-method > .special > .card-number-input {width: 100%; margin-right: 0 !i
 }
 
 @media (max-width: 666px) {
-    .program-cards-container {width: 80vw; min-width: 310px; display: block;}
+    .program-cards-container {width: 80vw; min-width: 280px; display: block;}
     .program-card {
         width: 100%;
         /* min-width: 300px; */
         flex-direction: column;
     }
     .program-card-image {margin: 0 auto;}
-    .program-card-info {border-right: none; height: max-content; border-bottom: 1px solid #8B8C8C; width: 100%;}
+    .program-card-info {border-right: none; height: max-content; border-bottom: 1px solid #8B8C8C; width: 100%; margin-right: 0;}
     .program-card-info > li {font-size: 16px;} 
     .program-card-buttons-container {
         position: relative;
@@ -2603,6 +2719,8 @@ form.pay-method > .special > .card-number-input {width: 100%; margin-right: 0 !i
     .goal-card-title {
         font-size: max(7vw,2rem);
     }
+    .program-card-info > .program-card-content-title {font-size: 22px; text-align: center;}
+    .program-card-info > li {font-size: 14px; margin: 4px 0;}
 }
 @media (max-width: 360px) {
     .header {
